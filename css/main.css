@@ -1,0 +1,136 @@
+/*  -------- HTML, BODY VALUES -------- */
+    
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    line-height: 2;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/*  -------- MOBILE NAVIGATION BAR -------- */
+.btn-close { font-size: 2rem;}
+.navbar-collapse-text { padding: 8rem 0;}
+
+.navbar-dark .navbar-toggler { border-color: transparent;}
+    
+.navbar-dark .navbar-toggler { outline: none;}
+
+.navbar-dark .navbar-brand { color: #000;}
+.navbar-dark .navbar-brand:hover { color: #000;}
+
+.bg-navbar {
+   background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+}
+
+
+/*  -------- MAIN -------- */
+
+main { padding-top: 5rem;}
+
+
+
+
+
+
+
+.offcanvas-header{ display:none; }
+
+@media (max-width: 992px) {
+  .offcanvas-header{ display:block; }
+  .navbar-collapse {
+    position: fixed;
+    top:0; 
+    bottom: 0;
+    right: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #fff;
+    transition: visibility .2s ease-in-out, -webkit-transform .2s ease-in-out;
+  }
+  .navbar-collapse.show {
+    visibility: visible;
+    transform: translateX(100%);
+  }
+}
+/*  -------- REUSABLE COMPONENTS -------- */
+
+.btn-type-1 { background-color: #4a4a4a;}
+
+.root-spacer  { padding: 2rem ;}
+
+.carousel-caption-text {
+  position: absolute;
+  right: 15%;
+  bottom: 20px;
+  left: 23%;
+  z-index: 10;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.carousel-caption-btn {
+  position: absolute;
+  bottom: -20px;
+  left: 23%;
+  z-index: 10;
+  font-weight: 500;
+  background-color: #fff;
+}
+
+.carousel-caption-btn:hover { 
+  background-color: #4a4a4a;
+  color: #fff;
+}
+
+
+
+.carousel-caption-img { 
+  height: 80vh;
+  position: relative;
+  object-fit: cover;
+  object-position: 15%;
+}
+
+.carousel-caption-img2 { 
+  height: 50vh;
+  position: relative;
+  object-fit: cover;
+  object-position: 15%;
+}
+
+.carousel-caption-text2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+  /*  -------- BREAKPOINTS -------- */
+
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {}
+
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+
+  }
+
+
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+ 
+  }
+  
