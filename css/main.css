@@ -1,52 +1,60 @@
+/*  -------- FONTS -------- */
+@font-face{font-family:sofiapro;src:url(https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-regular-webfont.woff2) format('woff2'),url(https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-regular-webfont.woff) format('woff');font-weight:400;font-style:normal}
+
+@font-face{font-family:sofiapro;src:url(https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-medium-webfont.woff2) format('woff2'),url(https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-medium-webfont.woff) format('woff');font-weight:500;font-style:normal}
+
+@font-face{font-family:sofiapro;src:url(https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-mediumit-webfont.woff2) format('woff2'),url(https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-mediumit-webfont.woff) format('woff');font-weight:500;font-style:italic}
+
+@font-face{font-family:sofiapro;src:url(https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-semibold-webfont.woff2) format('woff2'),url(https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-semibold-webfont.woff) format('woff');font-weight:600;font-style:normal}
+
+@font-face{font-family:sofiapro;src:url(https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-bold-webfont.woff2) format('woff2'),url(https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-bold-webfont.woff) format('woff');font-weight:700;font-style:normal}
+
 /*  -------- HTML, BODY VALUES -------- */
+.nav-spacer{ 
+  /* border: 2px solid red; */
+  margin: 0 10px;
+  /* padding: 8px 0; */
+
+}
     
 html,
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: sofiapro, Helvetica, Arial, sans-serif;
     color: #000;
-    line-height: 2;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+.navbar-dark .navbar-toggler-icon  {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+  }
 
 /*  -------- MOBILE NAVIGATION BAR -------- */
-.btn-close { font-size: 2rem;}
+.navbar { padding: 0;}
 .navbar-collapse-text { padding: 8rem 0;}
-
 .navbar-dark .navbar-toggler { border-color: transparent;}
-    
 .navbar-dark .navbar-toggler { outline: none;}
-
-.navbar-dark .navbar-brand { color: #000;}
+.navbar-dark .navbar-brand { 
+  color: #000;
+  font-size: 1.5rem;
+}
 .navbar-dark .navbar-brand:hover { color: #000;}
 
 .bg-navbar {
    background-color: #fff;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
 }
+.btn-close { font-size: 2rem;}
 
 
-/*  -------- MAIN -------- */
-
-main { padding-top: 5rem;}
-
-
-
-
-
-
-
-.offcanvas-header{ display:none; }
-
-@media (max-width: 992px) {
-  .offcanvas-header{ display:block; }
+.offcanvas-header{ display:block; }
   .navbar-collapse {
     position: fixed;
     top:0; 
     bottom: 0;
     right: 100%;
     width: 100%;
+    z-index: 2;
     padding-right: 1rem;
     padding-left: 1rem;
     overflow-y: auto;
@@ -57,13 +65,61 @@ main { padding-top: 5rem;}
   .navbar-collapse.show {
     visibility: visible;
     transform: translateX(100%);
+  } 
+
+  .nav-box-1 { margin-left: -10rem;}
+
+  
+/*  -------- MAIN NAVIGATION BAR -------- */
+  .sub-nav-box-3 { 
+    color: #4a4a4a;
+    font-weight: 500;
   }
-}
+
+  .icon-search {
+    stroke: #4a4a4a;
+  }
+
+  .iconSvg { margin-top: .8rem;}
+    
+  input[type="search"] {
+    border: none;
+    color: #999;
+  }
+  input[type="search"]:focus, input[type="search"]:hover {
+    color: #4a4a4a;
+    outline: none;
+  }
+
+  input::placeholder{  color: #999;}
+  input:hover::placeholder{ color: #4a4a4a;}
+
+  
+  .icon {
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #e7e7e7;
+  }
+
+ .sub-nav-box-3:hover {
+    cursor: pointer;
+    border-bottom: 3px solid #4a4a4a;
+  }
+
+
+
+
+
+/*  -------- MAIN -------- */
+
+main { padding-top: 10rem;}
+
 /*  -------- REUSABLE COMPONENTS -------- */
-
 .btn-type-1 { background-color: #4a4a4a;}
+.text-bg { color: #4a4a4a;}
+.text-bg:hover { color: #4a4a4a;}
 
-.root-spacer  { padding: 2rem ;}
+/* 
 
 .carousel-caption-text {
   position: absolute;
@@ -71,8 +127,8 @@ main { padding-top: 5rem;}
   bottom: 20px;
   left: 23%;
   z-index: 10;
-  font-size: 1.7rem;
-  font-weight: 500;
+  font-size: 1.8rem;
+  font-weight: 600;
   color: #fff;
   line-height: 1.5;
   text-align: left;
@@ -102,18 +158,47 @@ main { padding-top: 5rem;}
 }
 
 .carousel-caption-img2 { 
-  height: 50vh;
+  height: 60vh;
   position: relative;
   object-fit: cover;
   object-position: 15%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  opacity: 0.9;
 }
 
 .carousel-caption-text2 {
+  /* font-size: 2rem;
+  font-weight: 600;
   position: absolute;
-  top: 50%;
+  bottom: -105%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+  background-color: rgba(0,0,0,.2);
+    text-shadow: 1px 1px 2px rgba(0,0,0,.4); */
+
+/*    
+      z-index: 1;
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%; */
+      /* /* height: 100%; */
+      margin: 0;
+      /* background-color: #000; */
+      background-color: rgba(0,0,0,.2);
+      text-shadow: 1px 1px 2px rgba(0,0,0,.4);
+      transition: .1s ease-in-out;
+  }
+
+.box-img-1:hover {
+  /* background-color: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); */
+  /* background-color: #000;
+  cursor: pointer;
+  opacity: 1; */
+    
+} */
+
+
 
 
 
@@ -125,12 +210,33 @@ main { padding-top: 5rem;}
 
   /* Medium devices (tablets, 768px and up) */
   @media (min-width: 768px) {
+    .navbar-dark .navbar-toggler {
+      display: none;
+  }
+
+    
 
   }
 
 
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 992px) {
+    .navbar-dark .navbar-brand { font-size: 1.5rem;}
+
+    .nav-box-3 { margin-left: 5rem;}
+     
+    .text-lg-size { font-size: 1.2rem;}
+
+    ::placeholder { font-size: 1.2rem;}
+    .iconSvg { margin-top: 1.3rem;}
+    .search-box { margin-top: 1.2rem!important;}
+      
  
   }
+
+  /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .nav-box-3 { margin-left: 35rem;}
+
+ }
   
