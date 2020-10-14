@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studiotime</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">Studiotime</div>
+        <div class="mobile-search-icon">
+            <i class="fas fa-search"></i>
+        </div>
+        
+        <div class="searchBar">
+            <div class="searchIcon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="close searchClose">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="searchInput">
+                
+                <input type="text" placeholder="Try &quot;Los Angeles&quot;">
+            </div>
+
+            <div class="addBtn">
+                <a href="#">+Add your studio</a>
+            </div>
+        </div>
+        <div class="loginRegister">
+            <i class="mobile-menu fas fa-bars"></i>
+            <a href="#">Sign up</a>
+            <a href="#">Log in</a>
+            <div class="login-popup">
+                <div class="close menuClose">
+                    <i class="fas fa-times"></i>
+                </div>
+                
+                <h2>Would you like to <br> <a href="#">Sign up</a> or <a href="#">Log in</a>?</h2>
+                <div class="popup-footer">
+                    <a href="#">+Add your studio</a>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+
+<!-- jQuery and JS bundle w/ Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script>
+    // Menu Variables
+    let menuToggler = document.querySelector('.mobile-menu');
+    let loginRegisterPopup = document.querySelector('.login-popup');
+    let closeMenuBtn = document.querySelector('.menuClose');
+    // Search variables
+    let mobileSearch = document.querySelector('.searchBar');
+    let searchIconBtn = document.querySelector('.mobile-search-icon')
+    let closeSearchBtn = document.querySelector('.searchClose');
+
+    // Menu Function to show and hide
+    let loginRegisterShower = () => {
+        loginRegisterPopup.classList.add('show')
+    }
+    let loginRegisterHider = () => {
+        loginRegisterPopup.classList.remove('show')
+    }
+
+    // Search Function to show and hide
+
+    let searchShower = () => {
+        mobileSearch.classList.add('show')
+    }
+    let searchHider = () => {
+        mobileSearch.classList.remove('show')
+    }
+
+    // Event Listener
+    menuToggler.addEventListener('click', loginRegisterShower);
+    closeMenuBtn.addEventListener('click', loginRegisterHider);
+
+    searchIconBtn.addEventListener('click', searchShower);
+    closeSearchBtn.addEventListener('click', searchHider);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+a{
+    color: #111;
+}
+
+header{
+    align-items: center;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    display: flex;
+    height: 72px;
+    width: 100%;
+    padding-right: 26px;
+}
+
+header .logo{
+    font-size: 1.3rem;
+    font-weight: 700;
+    height: 100%;
+    padding: 20px 26px;
+    border-right: 1px solid #ccc;
+    transition: all ease-in .2s;
+    cursor: pointer;
+}
+
+header .logo:hover{
+    border-bottom: 3px solid #000;
+}
+
+header .searchBar{
+    align-items: center;
+    display: flex;
+    height: 100%;
+    margin-left: 26px;
+    flex: 1fr;
+    width: 100%;
+}
+
+header .searchBar .searchIcon i{
+    font-size: 24px;
+}
+
+header .searchBar .searchInput{
+    flex: 1fr;
+    height: 100%;
+    width: 100%;
+}
+
+header .searchBar .searchInput input{
+    border: none;
+    height: 100%;
+    outline: none;
+    padding: 1rem;
+    width: 100%;
+}
+
+header .searchBar .addBtn{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 220px;
+}
+
+header .searchBar .addBtn a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in .2s;
+}
+
+header .loginRegister{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .loginRegister a{
+    height: 100%;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all ease-in .2s;
+}
+
+a:hover{
+    border-bottom: 3px solid #000;
+}
+
+.mobile-search-icon{
+    display: none;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.login-popup{
+    display: none;
+}
+
+.searchClose{
+    display: none;
+}
+
+@media (max-width: 800px){
+    header{
+        justify-content: space-between;
+        padding: 0 26px;
+    }
+
+    header .logo{
+        order: 2;
+        border-right: none;
+        border-bottom: none;
+    }
+
+    .mobile-search-icon{
+        display: block;
+        order: 3;
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+
+    .loginRegister{
+        order: 1;
+    }
+
+    header .loginRegister i{
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    header .loginRegister a{
+        display: none;
+    }
+
+    .mobile-search-icon{
+        cursor: pointer;
+    }
+
+    header .searchBar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        margin: 0;
+        background-color: #fff;
+        padding: 0 26px;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: right;
+        transition: all ease-in-out .5s;
+    }
+
+    header .searchBar.show{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    header .searchBar .addBtn{
+        display: none;
+    }
+
+    header .searchBar .searchInput{
+        position: absolute;
+        top: 60px;
+        height: 60px;
+        padding-left: 20px;
+        margin-right: 26px;
+        font-size: 30px;
+        width: 90vw;
+    }
+
+    header .searchBar .searchInput::after{
+        content: '';
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #000;
+    }
+
+    header .searchBar .searchInput::before{
+        content: 'Tip: You can search studios by city, address, or zip code.';
+        position: absolute;
+        font-size: 14px;
+        font-weight: 500;
+        top: 86px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        color: #4a4a4a;
+    }
+
+    header .searchBar .searchIcon{
+        position: absolute;
+        height: 60px;
+        top: 60px;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+    }
+
+    .login-popup{
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+        transform: scale(0);
+        opacity: 0;
+        transition: all ease-in-out .4s;
+        transform-origin: top;
+    }
+
+    .login-popup h2{
+        font-size: 1.5rem;
+        line-height: 36px;
+        color: #4a4a4a;
+        font-weight: 700;
+        margin: 0 26px;
+        margin-top: 6rem;
+    }
+
+    .login-popup h2 a{
+        display: inline;
+        font-size: inherit;
+        font-weight: inherit;
+        color: inherit;
+    }
+
+    .close{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .popup-footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 -2px 4px 0 rgba(0,0,0,.1);
+        padding: 26px;
+    }
+
+    .login-popup.show{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    header .loginRegister .popup-footer a{
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        background-color: #4a4a4a;
+        padding: 20px 0;
+    }
+
+}

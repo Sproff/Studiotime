@@ -11,3 +11,22 @@ $(".btn-close").click(function(e){
     $("body").removeClass("offcanvas-active");
 }); 
 
+let searchBtn = document.querySelector('.iconSvg');
+        let close = document.querySelector('.close');
+    
+        // Eventlisner
+    
+        // Show button event
+        searchBtn.addEventListener('click', (e) => {
+          e.preventDefault()
+          let search = document.querySelector('.search');
+          search.classList.add('show');
+        });
+    
+        // Close Button event
+    
+        close.addEventListener('click', (e) => {
+          e.preventDefault()
+          let search = document.querySelector('.search');
+          search.classList.remove('show');
+        });

@@ -16,7 +16,7 @@
     <title>STUDIOTIME</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-navbar fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-navbar fixed-top">
         <div class="navbar-collapse" id="main_nav">
             <div class="offcanvas-header mt-3">  
               <button class="btn btn-close float-right"> &times; </button>
@@ -37,95 +37,497 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         
-        <div class="row">
+        
           <div class="nav-box-1">
-            <a class="navbar-brand ml-n5 py-2 mx-md-4 font-weight-bold nav-spacer py-md-3 pl-lg-5" href="#">Studiotime&trade;</a>
+            <a class="navbar-brand  py-2 mx-md-4 font-weight-bold nav-spacer py-md-3 pl-lg-5" href="#">Studiotime&trade;</a>
           </div>
 
-          <div class="row nav-box-2">
-            <div class="row nav-spacer border-0 icon py-md-2 pl-md-4 pr-lg-5">
-              <svg class="iconSvg d-flex" width="21" height="22" viewBox="0 0 21 22" xmlns="http://www.w3.org/2000/svg">
+            <div class="border-0 icon py-md-2 pl-md-4 pr-lg-5">
+              <svg class="iconSvg" width="21" height="22" viewBox="0 0 21 22" xmlns="http://www.w3.org/2000/svg">
                 <g class="icon-search" transform="matrix(-1 0 0 1 20 1)" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M13 14l5.241 5.241"></path>
                   <circle cx="7.5" cy="7.5" r="7.5"></circle>
                 </g>
               </svg>
-
-              <div class="nav-spacer d-none d-md-flex">
-                <input type="search" class="search-box mt-md-2" autocomplete="off" placeholder="Try &quot;Los Angeles&quot;" name="location" value="">
-              </div>
             </div>
-  
-           
 
-            <div class="row nav-spacer d-none d-md-flex nav-box-3">
-              <div class="nav-spacer sub-nav-box-3 py-md-3 py-lg-4"><a href="#" class="text-decoration-none text-bg text-lg-size">+ Add your studio</a></div>
-              <div class="nav-spacer sub-nav-box-3 py-md-3 py-lg-4"><a href="#" class="text-decoration-none text-bg text-lg-size">Sign Up</a></div>
-              <div class="nav-spacer sub-nav-box-3 py-md-3 py-lg-4"><a href="#" class="text-decoration-none text-bg text-lg-size">Log In</a></div>
-  
+            <div class="search">
+              <button class="btn btn-close close m-4"> &times; </button>
+              <input type="search" class="searchInput font-weight-bold" placeholder="Try &quot;Los Angeles&quot;" name="location" value="">
+              <p><span class="p-3">Tip: You can search studios by city, address, or zip code.</span></p>
             </div>
-          </div>
+    
+ </nav>
 
-          
+      <!-- -------- MAIN -------- -->
 
-        </div>
-      
-        
-      </nav>
-
-      <!-- <main class="container nav-spacer-spacer mt-4">
-        <div class="my-5">
-          <div>
+      <main class="container spacer">
+        <div>
+          <div class="main-box-title-1">
             <h3 class="font-weight-bold">Discover & Book Music Studios</h3>
           </div>
 
-          <div class="">
-            <img src="./img/home-img1.jpg" class="w-100 carousel-caption-img" alt="">
-            <p class="carousel-caption-text">The largest & most trusted online community to rent music studios.</p>
-            <button class="btn carousel-caption-btn px-4 py-2 text-uppercase">Get Started</button>
+          <div class="hero-box">
+            <div class="main-box-1">
+              <img src="./img/home-img1.jpg" class="main-box-img-1" alt="">
+            </div>
+            <div class="main-box-text">
+              <p class="box-text-1 font-weight-bold">The largest & most trusted online community to rent music studios.</p>
+              <button class="text-uppercase"><a href="#" class="btn  text-decoration-none text-dark main-box-btn rounded font-weight-bold ml-n2 px-5 py-2">Get Started</a></button>
+            </div>
           </div>
         </div>
       </main>
 
-      <section class="nav-spacer-spacer">
+      <section class="container spacer">
         <div class="box1">
           <div>
             <h3 class="font-weight-bold">Explore Studios</h3>
-            <p>Find studios nearby, or explore new ones around the world</p>
+            <p class="text-size">Find studios nearby, or explore new ones around the world</p>
           </div>
 
           <div>
             <div class="box-img-1">
-              <div class="carousel-caption-text2 text-white">Los Angeles</div>
-              <img src="./img/Los-Angeles.jpg" class="w-100 carousel-caption-img2" alt="">
-         
+              <div class="main-sub-box-1">
+                <div class="sub-box-1">
+                  <div class="sub-box-text-1 text-white w-100 h-100 d-flex  justify-content-center align-items-center font-weight-bold"><a href="#" class="text-decoration-none text-white">Los Angeles</a></div>
+                  <img src="./img/Los-Angeles.jpg" class="w-100 h-100 sub-box-img-1" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box1 mt-4">
+          <div>
+            <div class="box-img-1">
+              <div class="main-sub-box-1">
+                <div class="sub-box-1">
+                  <div class="sub-box-text-1 text-white w-100 h-100 d-flex  justify-content-center align-items-center font-weight-bold"><a href="#" class="text-decoration-none text-white">New York</a></div>
+                  <img src="./img/new-york.jpg" class="w-100 h-100 sub-box-img-1" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box1 mt-4">
+          <div>
+            <div class="box-img-1">
+              <div class="main-sub-box-1">
+                <div class="sub-box-1">
+                  <div class="sub-box-text-1 text-white w-100 h-100 d-flex  justify-content-center align-items-center font-weight-bold"><a href="#" class="text-decoration-none text-white">London</a></div>
+                  <img src="./img/london.jpg" class="w-100 h-100 sub-box-img-1" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- -------- HYPER-LINK -------- -->
+
+        <div class="mt-4">
+          <a href="#" class="hyper-link">Explore more studios around the world</a>
+        </div>
+      </section>
+
+      <!-- -------- EXPLORE STUDIOS SECTION -------- -->
+
+      <section class="container spacer">
+        <div>
+          <div class="hero-box">
+            <div class="main-box-1">
+              <img src="./img/airbnb_experiences.jpg" class="main-box-img-2" alt="">
+            </div>
+            <div class="main-box-text">
+              <div>
+                <h4><span class="intro font-weight-bold position-relative text-uppercase">Introducing</span></h4>
+                <h2 class="session text-white font-weight-bold position-relative mt-3"><span>Studiotime <br> Sessions</span></h2>
+              </div>
+              <p class="box-text-2">Live shows & intimate performances in some of our most unique music studios.</p>
+              <button class="text-uppercase"><a href="#" class="btn text-decoration-none text-dark main-box-btn rounded font-weight-bold ml-n2 px-5 py-2">Learn More</a></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------- PREMIUM STUDIOS SECTION -------- -->
+
+      <section class="container spacer">
+        <div class="premium-section">
+          <div>
+            <h3 class="font-weight-bold">Studiotime Premium Verified Studios</h3>
+            <p class="text-size">Browse our newest selection of premium verified studios</p>
+          </div>
+
+          <div class="box1">
+            <div class="box-img-1">
+              <div class="main-sub-box-1">
+                  <div class="sub-box-text-2 w-100">
+                    <a href="#" class="text-decoration-none text-white">
+                      <span class="badge badge-light float-right m-3 p-2 font-weight-light"> 
+                        <i class="icon fas fa-bolt"></i>
+                        Quick replies
+                      </span>
+                    </div>
+                  <img src="./img/premium.jpg" class="w-100 h-100 sub-box-img-2" alt="">
+              </div>
+            </div>
+
+              <div class="row mt-3 mb-n3">
+                <div class="col-3">
+                  <span class="badge btn-type-2 px-2 text-white">PREMIUM</span>
+                </div>
+                <div class="col">
+                  <span class="font-type-1 font-weight-bold">VERIFIED</span>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-3">
+                  <div>
+                    <span class="price font-weight-bold">$35.00 </span>
+                  </div>
+                  <div class="mt-n1">
+                    <span class="time font-weight-normal">per hour</span>
+                  </div>
+                </div>
+                
+                
+                <div class="col-8">
+                  <div>
+                    <span class=" font-weight-bold name">Meserole Sound</span>
+                  </div>
+                  <div class="row mt-n1">
+                    <div class="col">
+                      <span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span>
+                      <span class="booking font-weight-normal"> 4 • 15 bookings</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
+          <div class="box1 mt-5">
+            <div class="box-img-1">
+              <div class="main-sub-box-1">
+                  <div class="sub-box-text-2 w-100">
+                    <a href="#" class="text-decoration-none text-white">
+                      <span class="badge badge-light float-right m-3 p-2 font-weight-light"> 
+                        <i class="icon fas fa-bolt"></i>
+                        Quick replies
+                      </span>
+                    </div>
+                  <img src="./img/premium2.jpg" class="w-100 h-100 sub-box-img-2" alt="">
+              </div>
+            </div>
+
+              <div class="row mt-3 mb-n3">
+                <div class="col-3">
+                  <span class="badge btn-type-2 px-2 text-white">PREMIUM</span>
+                </div>
+                <div class="col">
+                  <span class="font-type-1 font-weight-bold">VERIFIED</span>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-3">
+                  <div>
+                    <span class="price font-weight-bold">$50.00 </span>
+                  </div>
+                  <div class="mt-n1">
+                    <span class="time font-weight-normal">per hour</span>
+                  </div>
+                </div>
+                
+                
+                <div class="col-8">
+                  <div>
+                    <span class="font-weight-bold name">Krush Studios</span>
+                  </div>
+                  <div class="row mt-n1">
+                    <div class="col">
+                      <span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span>
+                      <span class="booking font-weight-normal"> 3 • 23 bookings</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="box1 mt-5">
+            <div class="box-img-1">
+              <div class="main-sub-box-1">
+                  <div class="sub-box-text-2 w-100">
+                    <a href="#" class="text-decoration-none text-white">
+                      <span class="badge badge-light float-right m-3 p-2 font-weight-light"> 
+                        <i class="icon fas fa-bolt"></i>
+                        Quick replies
+                      </span>
+                    </div>
+                  <img src="./img/premium4.jpg" class="w-100 h-100 sub-box-img-2" alt="">
+              </div>
+            </div>
+
+              <div class="row mt-3 mb-n3">
+                <div class="col-3">
+                  <span class="badge btn-type-2 px-2 text-white">PREMIUM</span>
+                </div>
+                <div class="col">
+                  <span class="font-type-1 font-weight-bold">VERIFIED</span>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-3">
+                  <div>
+                    <span class="price font-weight-bold">$40.00 </span>
+                  </div>
+                  <div class="mt-n1">
+                    <span class="time font-weight-normal">per hour</span>
+                  </div>
+                </div>
+                
+                
+                <div class="col-8">
+                  <div>
+                    <span class="font-weight-bold name">727 Studio (Temporary Closed)</span>
+                  </div>
+                  <div class="row mt-n1">
+                    <div class="col">
+                      <span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span>
+                      <span class="booking font-weight-normal"> 13 • 132 bookings</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="box1 mt-5">
+            <div class="box-img-1">
+              <div class="main-sub-box-1">
+                  <div class="sub-box-text-2 w-100">
+                    <a href="#" class="text-decoration-none text-white">
+                      <span class="badge badge-light float-right m-3 p-2 font-weight-light"> 
+                        <i class="icon fas fa-bolt"></i>
+                        Quick replies
+                      </span>
+                    </div>
+                  <img src="./img/premium5.jpg" class="w-100 h-100 sub-box-img-2" alt="">
+              </div>
+            </div>
+
+              <div class="row mt-3 mb-n3">
+                <div class="col-3">
+                  <span class="badge btn-type-2 px-2 text-white">PREMIUM</span>
+                </div>
+                <div class="col">
+                  <span class="font-type-1 font-weight-bold">VERIFIED</span>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-3">
+                  <div>
+                    <span class="price font-weight-bold">$100.00 </span>
+                  </div>
+                  <div class="mt-n1">
+                    <span class="time font-weight-normal">per hour</span>
+                  </div>
+                </div>
+                
+                
+                <div class="col-8">
+                  <div>
+                    <span class="font-weight-bold name">Content Creation Labs at Pro Audio LA</span>
+                  </div>
+                  <div class="row mt-n1">
+                    <div class="col">
+                      <span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span>
+                      <span class="booking font-weight-normal"> 1 • 4 bookings</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="box1 mt-5">
+            <div class="box-img-1">
+              <div class="main-sub-box-1">
+                  <div class="sub-box-text-2 w-100">
+                    <a href="#" class="text-decoration-none text-white">
+                      <span class="badge badge-light float-right m-3 p-2 font-weight-light"> 
+                        <i class="icon fas fa-bolt"></i>
+                        Quick replies
+                      </span>
+                    </div>
+                  <img src="./img/premium6.jpg" class="w-100 h-100 sub-box-img-2" alt="">
+              </div>
+            </div>
+
+              <div class="row mt-3 mb-n3">
+                <div class="col-3">
+                  <span class="badge btn-type-2 px-2 text-white">PREMIUM</span>
+                </div>
+                <div class="col">
+                  <span class="font-type-1 font-weight-bold">VERIFIED</span>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-3">
+                  <div>
+                    <span class="price font-weight-bold">$39.00 </span>
+                  </div>
+                  <div class="mt-n1">
+                    <span class="time font-weight-normal">per hour</span>
+                  </div>
+                </div>
+                
+                
+                <div class="col-8">
+                  <div>
+                    <span class="font-weight-bold name">DELUXE Studio @ The Dock</span>
+                  </div>
+                  <div class="row mt-n1">
+                    <div class="col">
+                      <span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span>
+                      <span class="booking font-weight-normal"> 3 • 12 bookings</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="box1 mt-5">
+            <div class="box-img-1">
+              <div class="main-sub-box-1">
+                  <div class="sub-box-text-2 w-100">
+                    <a href="#" class="text-decoration-none text-white">
+                      <span class="badge badge-light float-right m-3 p-2 font-weight-light"> 
+                        <i class="icon fas fa-bolt"></i>
+                        Quick replies
+                      </span>
+                    </div>
+                  <img src="./img/premium7.jpg" class="w-100 h-100 sub-box-img-2" alt="">
+              </div>
+            </div>
+
+              <div class="row mt-3 mb-n3">
+                <div class="col-3">
+                  <span class="badge btn-type-2 px-2 text-white">PREMIUM</span>
+                </div>
+                <div class="col">
+                  <span class="font-type-1 font-weight-bold">VERIFIED</span>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-3">
+                  <div>
+                    <span class="price font-weight-bold">$49.99 </span>
+                  </div>
+                  <div class="mt-n1">
+                    <span class="time font-weight-normal">per hour</span>
+                  </div>
+                </div>
+                
+                
+                <div class="col-8">
+                  <div>
+                    <span class="font-weight-bold name">Hostel Takeover Studio</span>
+                  </div>
+                  <div class="row mt-n1">
+                    <div class="col">
+                      <span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span><span class="rating fas fa-star"></span>
+                      <span class="booking font-weight-normal"> 3 • 30 bookings</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <!-- -------- HYPER-LINK -------- -->
+          
+          <div class="mt-4">
+            <a href="#" class="hyper-link">See all of our premium verified studios</a>
+          </div>
+
         </div>
+      </section>
+
+       <!-- -------- RIGHT STUDIOS -------- -->
+
+      <section class="container spacer">
+        <div class="box1">
+          <div>
+            <h3 class="font-weight-bold my-5">Studios That Are Right For You</h3>
+          </div>
+
+          <div>
+            <div class="box-img-1">
+              <div class="main-sub-box-1">
+                <div class="sub-box-1">
+                  <div class="sub-box-text-1 text-white w-100 h-100 d-flex  justify-content-center align-items-center font-weight-bold"><a href="#" class="text-decoration-none text-white">Home Studios</a></div>
+                  <img src="./img/home-studio.jpg" class="w-100 h-100 sub-box-img-1" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <div class="box-img-1">
+            <div class="main-sub-box-1">
+              <div class="sub-box-1">
+                <div class="sub-box-text-1 text-white w-100 h-100 d-flex  justify-content-center align-items-center font-weight-bold"><a href="#" class="text-decoration-none text-white">Podcast Studios</a></div>
+                <img src="./img/podcast-studio.jpg" class="w-100 h-100 sub-box-img-1" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <div class="box-img-1">
+            <div class="main-sub-box-1">
+              <div class="sub-box-1">
+                <div class="sub-box-text-1 text-white w-100 h-100 d-flex  justify-content-center align-items-center font-weight-bold"><a href="#" class="text-decoration-none text-white">Top-Line Studio</a></div>
+                <img src="./img/top-line studio.jpg" class="w-100 h-100 sub-box-img-1" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <a href="#" class="hyper-link">Show all studios</a>
+      </div>
+
+      </section>
       
 
-      </section> -->
-      <main class="">
+      <section class="container spacer">
+        <div>
+          <h3>How Studiotime Works</h3>
+        </div>
 
-      </main>
+        <div class="number">
+          <span class="rounded-circle">1</span>
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <div>
+          <h6>Discover Studios</h6>
+        </div>
+      </section>
+     
+      
 
 
 
