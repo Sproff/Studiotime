@@ -10,6 +10,11 @@
 @font-face{font-family:sofiapro;src:url(https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-bold-webfont.woff2) format('woff2'),url(https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-bold-webfont.woff) format('woff');font-weight:700;font-style:normal}
 
 /*  -------- HTML, BODY VALUES -------- */
+:root {
+  --animate-duration: 2000ms;
+  --animate-delay: 0.9s;
+}
+
 html,
 body {
     font-family: sofiapro, Helvetica, Arial, sans-serif;
