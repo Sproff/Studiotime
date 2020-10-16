@@ -1,32 +1,36 @@
  /*=================== MOBILE NAVIGATION BAR =====================*/
-$("[data-trigger]").on("click", function(){
-    let trigger_id =  $(this).attr('data-trigger');
-    $(trigger_id).toggleClass("show");
-    $('body').toggleClass("offcanvas-active");
-});
+// Variables
+let menuToggle = document.querySelector('.menuToggler');
+let menuList = document.querySelector('.menu-list');
+let closeBtn = document.querySelector('.close');
 
-// close button 
-$(".btn-close").click(function(e){
-    $(".navbar-collapse").removeClass("show");
-    $("body").removeClass("offcanvas-active");
-}); 
 
-let searchBtn = document.querySelector('.iconSvg');
-        let close = document.querySelector('.close');
-    
-        // Eventlisner
-    
-        // Show button event
-        searchBtn.addEventListener('click', (e) => {
-          e.preventDefault()
-          let search = document.querySelector('.search');
-          search.classList.add('show');
-        });
-    
-        // Close Button event
-    
-        close.addEventListener('click', (e) => {
-          e.preventDefault()
-          let search = document.querySelector('.search');
-          search.classList.remove('show');
-        });
+let searchIcon = document.querySelector('.searchIcon');
+let inputField = document.querySelector('.inputField');
+let searchCloseBtn = document.querySelector('.searchClose');
+
+// ShowMenu
+const showMenu = () => {
+    menuList.classList.add('show');
+}
+// CloseMenu
+const closeMenu = () => {
+    console.log('clicked')
+    menuList.classList.remove('show');
+}
+
+// ShowSearch
+const showSearch = () => {
+    inputField.classList.add('show');
+}
+// CloseSearch
+const closeSearch = () => {
+    inputField.classList.remove('show');
+}
+
+// EventListener
+menuToggle.addEventListener('click', showMenu);
+closeBtn.addEventListener('click', closeMenu);
+
+searchIcon.addEventListener('click', showSearch);
+searchCloseBtn.addEventListener('click', closeSearch);

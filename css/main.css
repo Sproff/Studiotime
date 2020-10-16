@@ -19,109 +19,112 @@ body {
     overflow-x: hidden;
 }
 
-/*  -------- MOBILE NAVIGATION BAR -------- */
-.navbar-dark .navbar-toggler-icon  {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
-  }
-
-.navbar { padding: 0;}
-.navbar-collapse-text { padding: 8rem 0;}
-.navbar-dark .navbar-toggler { border-color: transparent;}
-.navbar-dark .navbar-toggler { outline: none;}
-.navbar-dark .navbar-brand { 
-  color: #000;
-  font-size: 1.5rem;
-}
-.navbar-dark .navbar-brand:hover { color: #000;}
-
-.bg-navbar {
-   background-color: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
-}
-.btn-close { font-size: 2rem;}
-
-.offcanvas-header{ display:block; }
-  .navbar-collapse {
-    position: fixed;
-    top:0; 
-    bottom: 0;
-    right: 100%;
+/*  -------- NAVIGATION BAR -------- */
+header{
+    align-items: center;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    display: flex;
+    height: 72px;
     width: 100%;
-    z-index: 2;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    overflow-y: auto;
-    visibility: hidden;
-    background-color: #fff;
-    transition: visibility .2s ease-in-out, -webkit-transform .2s ease-in-out;
-  }
-  .navbar-collapse.show {
-    visibility: visible;
-    transform: translateX(100%);
-  } 
+    padding: 0 26px;
+    justify-content: space-between;
+}
 
-  .nav-box-1 { margin: 0 -2rem;}
-  .iconSvg:hover { cursor: pointer;}
-  .sub-nav-box-1 { margin: 0 -14rem;}
+/*  -------- HEADER LOGO -------- */
+.logo{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
 
-  
-/*  -------- MAIN NAVIGATION BAR -------- */
-.sub-nav-box-3 { 
-    color: #4a4a4a;
-    font-weight: 500;
-  }
+/*  -------- MOBILE NAV-LIST -------- */
 
-  .icon-search {
-    stroke: #4a4a4a;
-  }
+.menu-list, .inputField{
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  transform: translate(0);
+  transform-origin: left;
+}
 
-  .iconSvg { margin-top: .8rem;}
-    
-  input[type="search"] {
-    color: #999;
-    font-size: 1.5rem;
-    margin: 4rem;
-    /* border-bottom-style: solid;
-    border-bottom-color: #4a4a4a;
-    border-radius: 0; */
-  }
-  input[type="search"]:focus, input[type="search"]:hover {
-    color: #4a4a4a;
-    outline: none;
-  }
+.addStudio{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* padding: 1.4rem; */
+  background-color: #fff;
+  box-shadow: 0 -2px 4px 0 rgba(0,0,0,.1);
+}
 
-  input::placeholder{  color: #999;}
-  input:hover::placeholder{ color: #4a4a4a;}
+/*  -------- CLOSE BUTTON -------- */
+.close{
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
 
-  .search{
-    position: absolute;
-    top: 0;
-    /* bottom: 0; */
-    z-index: 5000;
-    height: 100vh;
-    width: 100%;
-    background-color: #fff;
-    transform: scaleY(0);
-    opacity: 0;
-    transition: all ease-in .5s;
-    transform-origin: top;
-  }
-  
-  .show{
-    transform: scaleY(1);
-    opacity: 1;
-  }
-  
-  .icon {
-    border-left-style: solid;
-    border-left-width: 1px;
-    border-left-color: #e7e7e7;
-  }
+.addStudio a{
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.13rem;
+  background-color: #4a4a4a;
+  color: #fff;
+}
 
- .sub-nav-box-3:hover {
-    cursor: pointer;
-    border-bottom: 3px solid #4a4a4a;
-  }
+.addStudio a:hover{ background-color: #000;}
+
+.mobile-menu{
+  line-height: 1.5;
+  color: #4a4a4a;
+}
+
+/*  -------- MOBILE VIEW -------- */
+/* .nav-link{
+  display: none;
+} */
+
+.show{
+  top: 0;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.inputGroup{
+  margin: 6rem 1.4rem 0 1.4rem;
+  width: 90%;
+  height: 60px;
+  border-bottom: 2px solid #000;
+}
+
+.inputGroup::before{
+  content: 'Tip: You can search studios by city, address, or zip code.';
+  position: absolute;
+  top: 120%;
+  color: #4a4a4a;
+}
+
+.inputGroup i{
+  font-size: 1.4rem;
+}
+
+.inputGroup input{
+  background: none;
+  outline: none;
+}
+
+.menuToggler{
+  cursor: pointer;
+}
 
 
 
@@ -156,12 +159,26 @@ body {
 
 
 /*  -------- REUSABLE COMPONENTS -------- */
-.btn-type-1 { background-color: #4a4a4a;}
+.spacer { 
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.container { padding: 1.5rem 7.5vw;}
+
 .btn-type-2 { background-color: #c4a03e;}
 .font-type-1 { 
   color: #c4a03e;
   font-size: .8rem;
 }
+.text-color { 
+  color: #4a4a4a;
+  font-weight: 500;
+}
+.text-color:hover { color: #000;}
+.text-color2 {color: #4a4a4a;}
+.text-color2:hover { color: #4a4a4a;}
+
 
 .price { 
   color: #999;
@@ -186,13 +203,10 @@ body {
 .text-bg { color: #4a4a4a;}
 .text-bg:hover { color: #4a4a4a;}
 
-.spacer { margin: 6rem 0;}
-
 .hero-box {
   position: relative;
   height: auto;
   width: 100%;
-  max-width: 945px;
   margin: 0 auto;
 }
 
@@ -226,6 +240,8 @@ body {
   background-color: #fff;
   position: relative;
 }
+
+.main-box-btn:hover { background-color:#e7e7e7}
 
 .main-sub-box-1 {
   position: relative;
@@ -282,65 +298,150 @@ body {
 }
 
 .icon { 
-  font-size: .7rem;
+  font-size: .8rem;
   color: goldenrod;
 }
 .badge { font-size: .8rem;}
 
-.number {
-  
+.bg-works {
+  background-color: #f8f8f8;
+}
+
+.step {
+  font-size: 1.2rem;
+  color: #4a4a4a;
+}
+
+.step-para {
+  font-size: .9rem;
+  color: #4a4a4a;
 }
 
 
+footer {
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #e7e7e7;
+  width: 100%;
+}
+
+.social-icon {
+  color: #4a4a4a;
+  font-size: 1.2rem;
+}
+
+.badge-color { background-color: #006a70;}
+
+.iPhone-mockup { align-self: flex-end;}
 
     
-
-
-
-
 
 
 
   /*  -------- BREAKPOINTS -------- */
 
   /* Small devices (landscape phones, 576px and up) */
-  @media (min-width: 576px) {
-
-  }
+  @media (min-width: 576px) {}
 
 
   /* Medium devices (tablets, 768px and up) */
   @media (min-width: 768px) {
-    .navbar-dark .navbar-toggler {
+    .container { padding: 1rem 2vw;}
+
+    header{ display: flex;}
+
+  /*  -------- HIDDEN ELEMENTS -------- */
+  .menuToggler, .searchIcon, .mobile-menu, .close, .inputField .inputGroup::before{
       display: none;
+      pointer-events: none;
   }
 
-  .nav-box-1 { margin-left: 0rem;}
-  .search {display: none;}
+  /*  -------- VISIBLE ELEMENTS -------- */
+  .searchBar{
+      height: 100%;
+      width: 100%;
+      flex: 1fr;
+  }
+  .inputField, .menu-list{
+      opacity: 1;
+      transform: scale(1);
+      position: static;
+  }
 
-    
+  .inputField .inputGroup{
+      position: static;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      border: none;
+  }
 
+  .inputField .inputGroup input{
+      width: 100%;
+      height: 100%;
+  }
+
+    /*  -------- MENU -------- */
+
+  .menu{ height: 100%;}
+
+  .menu-list{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 350px;
+  }
+  .nav-link{
+      display: block;
+      width: 100px;
+  }
+
+  .addStudio a{
+    color: #4a4a4a;
+    font-size: 1.13rem;
+    background: none;
+  }
+  
+  .addStudio a:hover{
+    background: none;
+   }
+
+  .addStudio{
+      height: 100%;
+      background: none;
+      box-shadow: none;
+      width: 150px;
+      top: 0;
+  }
+
+  .addStudio a:hover, .nav-link:hover{ 
+    border-bottom: 3px solid #000;
+    color: #4a4a4a;
+  }
+
+   .nav-link{
+    background: none;
+    color: #4a4a4a;
+    padding: 1.4rem 0;
+  }
+
+  .logo{
+      order: 1;
+      border-right: 1px solid #e7e7e7;
+  }
+  .searchBar{ order: 2;}
+
+  .menu{ order: 3}
   }
 
 
-  /* Large devices (desktops, 992px and up) */
+  /* Large devices (desktops, 992px and up)*/
   @media (min-width: 992px) {
-    .navbar-dark .navbar-brand { font-size: 1.5rem;}
-
-    .nav-box-3 { margin-left: 5rem;}
-     
-    .text-lg-size { font-size: 1.2rem;}
-
-    ::placeholder { font-size: 1.2rem;}
-    .iconSvg { margin-top: 1.3rem;}
-    .search-box { margin-top: 1.2rem!important;}
-      
- 
+    .main-heading { font-size: 2.5rem;}
   }
 
   /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  .nav-box-3 { margin-left: 35rem;}
-
+  .container { padding: 0;}
  }
   
