@@ -36,16 +36,7 @@ header{
     justify-content: space-between;
 }
 
-/*  -------- HEADER LOGO -------- */
-.logo{
-  height: 100%;
-  display: flex;
-  align-items: center;
-  font-size: 1.3rem;
-  font-weight: 700;
-}
-
-/*  -------- MOBILE NAV-LIST -------- */
+.logo{ font-size: 1.5rem;}
 
 .menu-list, .inputField{
   position: fixed;
@@ -69,7 +60,6 @@ header{
   box-shadow: 0 -2px 4px 0 rgba(0,0,0,.1);
 }
 
-/*  -------- CLOSE BUTTON -------- */
 .close{
   top: 0;
   right: 0;
@@ -93,11 +83,6 @@ header{
   color: #4a4a4a;
 }
 
-/*  -------- MOBILE VIEW -------- */
-/* .nav-link{
-  display: none;
-} */
-
 .show{
   top: 0;
   opacity: 1;
@@ -116,7 +101,9 @@ header{
   content: 'Tip: You can search studios by city, address, or zip code.';
   position: absolute;
   top: 120%;
-  color: #4a4a4a;
+  color: #b2b2b2;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .inputGroup i{
@@ -126,16 +113,20 @@ header{
 .inputGroup input{
   background: none;
   outline: none;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #b2b2b2;
 }
 
 .menuToggler{
   cursor: pointer;
 }
 
-
-
+.searchIcon:hover { cursor: pointer;}
 
 /*  -------- MAIN -------- */
+main { margin-top: 7rem;}
+
 .main-box-img-2 {
     width: 100%;
     height: 100%;
@@ -386,6 +377,8 @@ footer {
       width: 100%;
       height: 100%;
   }
+
+  .inputGroup input { font-size: 1rem;}
 
     /*  -------- MENU -------- */
 
